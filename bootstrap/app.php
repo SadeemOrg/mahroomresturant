@@ -11,7 +11,8 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        \Badinansoft\LanguageSwitch\Http\Middleware\LanguageSwitch::class;
+
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

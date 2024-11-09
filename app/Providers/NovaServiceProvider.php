@@ -15,7 +15,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
      */
     public function boot()
     {
+
         parent::boot();
+
     }
 
     /**
@@ -66,7 +68,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
      */
     public function tools()
     {
-        return [];
+        return [
+                 new \Badinansoft\LanguageSwitch\LanguageSwitch(),
+    ];
     }
 
     /**
